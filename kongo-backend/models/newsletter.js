@@ -1,7 +1,7 @@
 const { DataTypes } = require('sequelize');
 const sequelize = require('../config/database');
 
-const Newsletter = sequelize.define('Newsletter', {
+const Newsletter = sequelize.define('newsletter', {
   email: {
     type: DataTypes.STRING,
     allowNull: false,

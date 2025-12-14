@@ -23,7 +23,7 @@ export class NewsletterComponent {
     this.errorMessage = '';
 
     this.http
-      .post('https://ton-api.com/newsletter', { email: this.email })
+      .post('https://localhost:3000/api/newsletter', { email: this.email })
       .subscribe({
         next: () => {
           this.successMessage = 'Inscription réussie ✨';

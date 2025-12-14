@@ -16,4 +16,5 @@ const globalMiddleWare = (app) => {
     next();
 };
 
-export default globalMiddleWare;
+module.exports = globalMiddleWare;
+;

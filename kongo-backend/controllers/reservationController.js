@@ -3,7 +3,7 @@ const Reservation = require('../models/reservation');
 
 exports.createReservation = async (req, res) => {
   try {
-    const { full_name, email, date } = req.body;
+    const { full_name, email, date_rdv } = req.body;
 
     console.log(req.body);
 
@@ -11,7 +11,7 @@ exports.createReservation = async (req, res) => {
     const newReservation = await Reservation.create({
       full_name,
       email,
-      date_rdv: date
+      date_rdv  
     });
 
     res.status(201).json({ 

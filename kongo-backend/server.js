@@ -2,21 +2,13 @@
 // SECTION 1 : IMPORTATION DES MODULES
 // ============================================
 
-// Module Node.js natif pour créer un serveur HTTPS sécurisé (avec SSL)
 const https = require('https');
-
-// Module File System pour lire/écrire des fichiers (on va lire les certificats SSL)
 const fs = require('fs');
-
-// Framework Express qui simplifie la création d'API REST
 const express = require('express');
-
-// CORS (Cross-Origin Resource Sharing) : permet à Angular (port 4200) de communiquer avec notre API (port 3000)
-// Sans ça, le navigateur bloque les requêtes entre différents ports
 const cors = require('cors');
-
-// Helmet ajoute automatiquement des en-têtes HTTP de sécurité pour protéger l'API
 const helmet = require('helmet');
+const sequelize = require('./config/database');
+const apiRoutes = require('./routes/apiRoutes');
 
 // Dotenv charge les variables d'environnement depuis un fichier .env (mots de passe, clés API, etc.)
 require('dotenv').config();
@@ -56,6 +48,8 @@ app.use(express.urlencoded({ extended: true }));
 // SECTION 4 : ROUTES DE L'API
 // ============================================
 
+app.use('/api', apiRoutes);
+
 // ROUTE GET : Page d'accueil de l'API
 // Accessible à : https://localhost:3000/
 app.get('/', (req, res) => {
@@ -69,29 +63,6 @@ app.get('/', (req, res) => {
   });
 });
 
-// ROUTE POST : Inscription à la newsletter
-// Accessible à : https://localhost:3000/api/newsletter/subscribe
-app.post('/api/newsletter/subscribe', (req, res) => {
-  // Cette route sera développée plus tard pour :
-  // 1. Recevoir l'email du client
-  // 2. Valider l'email
-  // 3. Enregistrer dans MongoDB
-  // 4. Envoyer un email de confirmation
-
-  res.json({ message: 'Newsletter endpoint - À développer' });
-});
-
-// ROUTE POST : Réservation exclusive avec un Nez AMENYS
-// Accessible à : https://localhost:3000/api/bookings/exclusivity
-app.post('/api/bookings/exclusivity', (req, res) => {
-  // Cette route sera développée plus tard pour :
-  // 1. Recevoir les infos du client (nom, ville, date préférée)
-  // 2. Valider les données
-  // 3. Enregistrer la réservation dans MongoDB
-  // 4. Envoyer un email de confirmation
-
-  res.json({ message: 'Booking endpoint - À développer' });
-});
 
 // ============================================
 // SECTION 5 : CONFIGURATION HTTPS/SSL

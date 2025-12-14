@@ -25,20 +25,7 @@ const app = express();
 // SECTION 3 : MIDDLEWARES DE SÉCURITÉ
 // ============================================
 
-// Active toutes les protections de sécurité Helmet automatiquement
-// (protection contre XSS, clickjacking, etc.)
-app.use(helmet());
-
-// Configure CORS pour autoriser uniquement notre frontend Angular
-app.use(
-  console.log("Reqete from " + app.get('origin')),
-  cors({
-    origin: 'https://localhost:4200', // Seul ce domaine peut accéder à l'API
-    credentials: true, // Permet l'envoi de cookies/authentification
-  })
-  
-);
-
+globalMiddleWare(app);
 // Middleware pour parser (analyser) les données JSON dans les requêtes
 // Exemple : {email: "test@kongo.com"} sera accessible via req.body.email
 app.use(express.json());

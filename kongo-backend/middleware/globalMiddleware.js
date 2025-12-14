@@ -1,7 +1,7 @@
 const cors = require('cors');
 const helmet = require('helmet');
 
-const globalMiddleWare = (app) => {
+const globalMiddleware = (app) => {
     console.log(req.method, req.url);
 
     app.use(
@@ -16,4 +16,4 @@ const globalMiddleWare = (app) => {
     next();
 };
 
-module.exports = globalMiddleWare;
+module.exports = globalMiddleware;

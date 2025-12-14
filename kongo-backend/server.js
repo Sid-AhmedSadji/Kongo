@@ -1,7 +1,6 @@
 // ============================================
 // SECTION 1 : IMPORTATION DES MODULES
 // ============================================
-const globalMiddleWare = require('./middleware/globalMiddleWare' );
 
 const https = require('https');
 const fs = require('fs');
@@ -9,6 +8,7 @@ const express = require('express');
 
 const sequelize = require('./config/database');
 const apiRoutes = require('./routes/apiRoutes');
+const globalMiddleware = require('./middleware/globalMiddleware' );
 
 // Dotenv charge les variables d'environnement depuis un fichier .env (mots de passe, clés API, etc.)
 require('dotenv').config();
@@ -25,7 +25,7 @@ const app = express();
 // SECTION 3 : MIDDLEWARES DE SÉCURITÉ
 // ============================================
 
-globalMiddleWare(app);
+globalMiddleware(app);
 // Middleware pour parser (analyser) les données JSON dans les requêtes
 // Exemple : {email: "test@kongo.com"} sera accessible via req.body.email
 app.use(express.json());

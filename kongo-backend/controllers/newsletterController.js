@@ -11,7 +11,7 @@ exports.newsletter = async (req, res) => {
 
     res.status(201).json({ 
       message: 'email    enregistrée avec succès', 
-      id: newReservation.id 
+      id: newNewsletter.id 
     });
 
   } catch (error) {

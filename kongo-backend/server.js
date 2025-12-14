@@ -31,7 +31,7 @@ app.use(helmet());
 
 // Configure CORS pour autoriser uniquement notre frontend Angular
 app.use(
-  console.log("Reqete from " + req.headers.origin),
+  console.log("Reqete from " + app.get('origin')),
   cors({
     origin: 'https://localhost:4200', // Seul ce domaine peut accéder à l'API
     credentials: true, // Permet l'envoi de cookies/authentification

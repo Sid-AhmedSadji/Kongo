@@ -1,7 +1,7 @@
 // ============================================
 // SECTION 1 : IMPORTATION DES MODULES
 // ============================================
-const globalMiddleWare = require('./middleware/globalMiddleWare' );
+const {globalMiddleWare} = require('./middleware/globalMiddleWare' );
 
 const https = require('https');
 const fs = require('fs');

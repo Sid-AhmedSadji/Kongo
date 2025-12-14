@@ -5,6 +5,8 @@ exports.createReservation = async (req, res) => {
   try {
     const { full_name, email, date } = req.body;
 
+    console.log(req.body);
+
     // On utilise Reservation.create
     const newReservation = await Reservation.create({
       full_name,

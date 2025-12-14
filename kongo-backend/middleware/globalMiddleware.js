@@ -1,9 +1,11 @@
 const cors = require('cors');
 const helmet = require('helmet');
+require('dotenv').config();
 
 const globalMiddleware = (app) => {
   // Logging méthode + URL
   app.use((req, res, next) => {
+    console.log(process.env.DB_PASSWORD);
     console.log(`${req.method} ${req.url}`);
     next();
   });

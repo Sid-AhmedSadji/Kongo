@@ -26,4 +26,4 @@ exports.createReservation = async (req, res) => {
     console.error(error);
     res.status(500).json({ error: 'Erreur serveur' });
   }
-};
+};  

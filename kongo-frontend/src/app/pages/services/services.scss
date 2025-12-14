@@ -1,0 +1,314 @@
+// ============================================
+// STYLES PAGE SERVICES LUXE KONGO
+// ============================================
+
+// Section principale
+.services-section {
+  // Espacement intérieur généreux
+  padding: 80px 10%;
+
+  // Fond blanc pur
+  background-color: #ffffff;
+
+  // Hauteur minimale
+  min-height: 80vh;
+}
+
+// Conteneur du contenu centré
+.services-content {
+  // Largeur maximale
+  max-width: 1200px;
+
+  // Centre le contenu
+  margin: 0 auto;
+}
+
+// Titre principal "Services Exclusifs"
+.services-title {
+  // Taille grande
+  font-size: 3.5rem;
+
+  // Police grasse
+  font-weight: 700;
+
+  // Couleur noire
+  color: #1a1a1a;
+
+  // Centre le texte
+  text-align: center;
+
+  // Espacement
+  margin: 0 0 20px 0;
+  letter-spacing: 4px;
+
+  // Police serif
+  font-family: 'Cormorant Garamond', serif;
+
+  // Majuscules
+  text-transform: uppercase;
+}
+
+// Sous-titre
+.services-subtitle {
+  // Taille moyenne
+  font-size: 1.6rem;
+
+  // Police légère
+  font-weight: 300;
+
+  // Couleur dorée
+  color: #d4af37;
+
+  // Centre le texte
+  text-align: center;
+
+  // Espacement
+  margin: 0 0 30px 0;
+  letter-spacing: 2px;
+
+  // Police serif italique
+  font-family: 'Cormorant Garamond', serif;
+  font-style: italic;
+}
+
+// Description
+.services-description {
+  // Taille confortable
+  font-size: 1.15rem;
+
+  // Hauteur de ligne
+  line-height: 1.8;
+
+  // Couleur grise
+  color: #333;
+
+  // Centre le texte
+  text-align: center;
+
+  // Largeur maximale
+  max-width: 800px;
+
+  // Centre le paragraphe
+  margin: 0 auto 50px auto;
+}
+
+// Séparateur doré
+.divider {
+  width: 100px;
+  height: 2px;
+  background-color: #d4af37;
+  margin: 50px auto;
+}
+
+// Titre section expérience
+.services-experience-title {
+  // Taille
+  font-size: 2rem;
+
+  // Police semi-grasse
+  font-weight: 600;
+
+  // Couleur noire
+  color: #1a1a1a;
+
+  // Centre
+  text-align: center;
+
+  // Espacement
+  margin: 50px 0 40px 0;
+  letter-spacing: 1px;
+
+  // Police serif
+  font-family: 'Cormorant Garamond', serif;
+}
+
+// ============================================
+// CARDS SERVICES (Grille de 3 cartes)
+// ============================================
+
+.services-cards {
+  // Grille CSS : 3 colonnes égales
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  // Espace entre les cartes
+  gap: 40px;
+
+  // Espacement
+  margin: 40px 0;
+}
+
+// Chaque carte individuelle
+.service-card {
+  // Fond légèrement gris
+  background-color: #f9f9f9;
+
+  // Espacement intérieur
+  padding: 40px 30px;
+
+  // Bordure subtile
+  border: 1px solid #e5e5e5;
+
+  // Centre le contenu
+  text-align: center;
+
+  // Coins arrondis
+  border-radius: 5px;
+
+  // Transition pour effet hover
+  transition: all 0.3s ease;
+
+  // Au survol
+  &:hover {
+    // Ombre plus prononcée
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+
+    // Légère translation vers le haut
+    transform: translateY(-5px);
+
+    // Bordure dorée
+    border-color: #d4af37;
+  }
+}
+
+// Titre de chaque carte
+.card-title {
+  // Taille
+  font-size: 1.5rem;
+
+  // Police grasse
+  font-weight: 600;
+
+  // Couleur dorée
+  color: #d4af37;
+
+  // Espacement
+  margin: 0 0 20px 0;
+  letter-spacing: 1px;
+
+  // Police serif
+  font-family: 'Cormorant Garamond', serif;
+}
+
+// Texte de chaque carte
+.card-text {
+  // Taille
+  font-size: 1rem;
+
+  // Hauteur de ligne
+  line-height: 1.7;
+
+  // Couleur grise
+  color: #555;
+
+  // Espacement
+  margin: 0;
+}
+
+// ============================================
+// BOUTON CALL-TO-ACTION
+// ============================================
+
+.cta-container {
+  // Centre le contenu
+  text-align: center;
+
+  // Espacement
+  margin: 60px 0 0 0;
+}
+
+// Bouton "Accéder à l'exclusivité"
+.cta-button {
+  // Fond doré
+  background-color: #d4af37;
+
+  // Texte blanc
+  color: #ffffff;
+
+  // Espacement intérieur
+  padding: 18px 50px;
+
+  // Taille de police
+  font-size: 1.1rem;
+
+  // Police grasse
+  font-weight: 600;
+
+  // Majuscules
+  text-transform: uppercase;
+
+  // Espacement des lettres
+  letter-spacing: 2px;
+
+  // Supprime la bordure par défaut
+  border: none;
+
+  // Coins arrondis
+  border-radius: 3px;
+
+  // Curseur pointeur
+  cursor: pointer;
+
+  // Transition douce
+  transition: all 0.3s ease;
+
+  // Au survol
+  &:hover {
+    // Doré plus foncé
+    background-color: #c19b2b;
+
+    // Légère élévation
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(212, 175, 55, 0.3);
+  }
+
+  // Au clic
+  &:active {
+    transform: translateY(0);
+  }
+}
+
+// Sous-titre du bouton
+.cta-subtitle {
+  // Taille
+  font-size: 0.95rem;
+
+  // Couleur grise
+  color: #666;
+
+  // Espacement
+  margin: 15px 0 0 0;
+
+  // Style italique
+  font-style: italic;
+}
+
+// ============================================
+// RESPONSIVE (Tablettes et Mobiles)
+// ============================================
+
+// Tablettes (< 1024px)
+@media (max-width: 1024px) {
+  .services-cards {
+    // 2 colonnes sur tablette
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+
+// Mobiles (< 768px)
+@media (max-width: 768px) {
+  .services-title {
+    font-size: 2.5rem;
+  }
+
+  .services-cards {
+    // 1 colonne sur mobile
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .services-section {
+    padding: 50px 5%;
+  }
+}

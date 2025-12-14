@@ -1,0 +1,27 @@
+<!-- ============================================
+     TEMPLATE PRINCIPAL DE L'APPLICATION
+     ============================================ -->
+
+<!-- Navbar fixe en haut (affichée sur toutes les pages) -->
+<!-- Le composant Navbar contient le menu Home/Services/Contact -->
+<app-navbar></app-navbar>
+
+<!-- Zone de contenu dynamique -->
+<!-- RouterOutlet affiche le composant correspondant à l'URL :
+     - /home → affiche HomeComponent
+     - /services → affiche ServicesComponent
+     - /contact → affiche ContactComponent -->
+<router-outlet></router-outlet>
+
+<!-- ============================================
+     STRUCTURE VISUELLE FINALE :
+
+     ┌─────────────────────────────────────┐
+     │  KONGO by AMENYS  [Home][Services]  │ ← Navbar (fixe)
+     ├─────────────────────────────────────┤
+     │                                     │
+     │   Contenu de la page active         │ ← RouterOutlet (change selon URL)
+     │   (Home ou Services ou Contact)     │
+     │                                     │
+     └─────────────────────────────────────┘
+     ============================================ -->

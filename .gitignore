@@ -1,0 +1,199 @@
+
+# ============================================
+# GITIGNORE KONGO PARFUM - RACINE
+# Protège TOUS les sous-dossiers (frontend + backend)
+# ============================================
+
+# ============================================
+# NODE.JS (Frontend + Backend)
+# ============================================
+
+# Dependencies (IMPORTANT : très lourd, ne jamais commit)
+**/node_modules/
+node_modules/
+
+# Logs npm
+**/npm-debug.log
+**/yarn-error.log
+**/yarn-debug.log
+npm-debug.log
+yarn-error.log
+
+# Lock files (optionnel, certains préfèrent les garder)
+# **/package-lock.json
+# **/yarn.lock
+
+# ============================================
+# VARIABLES D'ENVIRONNEMENT (CRITIQUE)
+# ============================================
+
+# Fichiers .env dans TOUS les dossiers
+**/.env
+**/.env.local
+**/.env.development
+**/.env.test
+**/.env.production
+**/.env.staging
+.env
+.env.local
+.env.production
+
+# ============================================
+# CERTIFICATS SSL (CRITIQUE - SÉCURITÉ)
+# ============================================
+
+# Dossier SSL complet
+**/ssl/
+ssl/
+
+# Extensions de certificats
+**/*.pem
+**/*.key
+**/*.crt
+**/*.cer
+**/*.p12
+**/*.pfx
+*.pem
+*.key
+*.crt
+
+# ============================================
+# BUILD & COMPILATION
+# ============================================
+
+# Angular build
+**/dist/
+dist/
+
+# Angular cache
+**/.angular/
+.angular/
+
+# Dossiers temporaires
+**/tmp/
+**/temp/
+tmp/
+temp/
+
+# Out directories
+**/out/
+**/out-tsc/
+out/
+out-tsc/
+
+# ============================================
+# LOGS (tous les dossiers)
+# ============================================
+
+**/*.log
+*.log
+**/logs/
+logs/
+
+# ============================================
+# BASES DE DONNÉES (si locales)
+# ============================================
+
+**/*.sqlite
+**/*.sqlite3
+**/*.db
+*.sqlite
+*.db
+
+# MongoDB local
+**/data/db/
+
+# ============================================
+# SYSTÈME D'EXPLOITATION
+# ============================================
+
+# macOS
+.DS_Store
+**/.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+
+# Linux
+*~
+.directory
+
+# ============================================
+# ÉDITEURS DE CODE & IDE
+# ============================================
+
+# Visual Studio Code
+.vscode/
+**/.vscode/
+*.code-workspace
+
+# JetBrains (WebStorm, IntelliJ, etc.)
+.idea/
+**/.idea/
+*.iml
+*.iws
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# ============================================
+# TESTS & COVERAGE
+# ============================================
+
+**/coverage/
+coverage/
+**/.nyc_output/
+.nyc_output/
+
+# ============================================
+# DIVERS
+# ============================================
+
+# Fichiers de backup
+*.bak
+*.backup
+*.old
+
+# Archives
+*.zip
+*.tar.gz
+*.rar
+
+# ============================================
+# FRONTEND ANGULAR SPÉCIFIQUE
+# ============================================
+
+# Angular cache moderne
+kongo-frontend/.angular/cache/
+kongo-frontend/.sass-cache/
+
+# Source maps (optionnel en prod)
+# **/*.map
+
+# ============================================
+# BACKEND NODE.JS SPÉCIFIQUE
+# ============================================
+
+# PM2 (si utilisé en production)
+**/.pm2/
+.pm2/
+
+# ============================================
+# FIN DU FICHIER
+# ============================================

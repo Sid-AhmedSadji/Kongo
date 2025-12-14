@@ -1,0 +1,214 @@
+// ============================================
+// STYLES PAGE CONTACT LUXE KONGO
+// ============================================
+
+// Section principale
+.contact-section {
+  // Espacement
+  padding: 80px 10%;
+
+  // Fond blanc
+  background-color: #ffffff;
+
+  // Hauteur minimale
+  min-height: 80vh;
+}
+
+// Conteneur
+.contact-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+// Titre "Nous Rencontrer"
+.contact-title {
+  // Taille grande
+  font-size: 3.5rem;
+
+  // Police grasse
+  font-weight: 700;
+
+  // Couleur noire
+  color: #1a1a1a;
+
+  // Centre
+  text-align: center;
+
+  // Espacement
+  margin: 0 0 30px 0;
+  letter-spacing: 4px;
+
+  // Police serif
+  font-family: 'Cormorant Garamond', serif;
+
+  // Majuscules
+  text-transform: uppercase;
+}
+
+// Description
+.contact-description {
+  // Taille
+  font-size: 1.15rem;
+
+  // Hauteur ligne
+  line-height: 1.8;
+
+  // Couleur
+  color: #333;
+
+  // Centre
+  text-align: center;
+
+  // Largeur max
+  max-width: 700px;
+
+  // Centre le paragraphe
+  margin: 0 auto 50px auto;
+}
+
+// Séparateur
+.divider {
+  width: 100px;
+  height: 2px;
+  background-color: #d4af37;
+  margin: 50px auto;
+}
+
+// ============================================
+// GRILLE DES VILLES (9 cartes)
+// ============================================
+
+.cities-grid {
+  // Grille : 3 colonnes
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  // Espace entre cartes
+  gap: 30px;
+
+  // Espacement
+  margin: 50px 0;
+}
+
+// Chaque carte ville
+.city-card {
+  // Fond gris clair
+  background-color: #f9f9f9;
+
+  // Espacement intérieur
+  padding: 50px 30px;
+
+  // Centre le texte
+  text-align: center;
+
+  // Bordure subtile
+  border: 1px solid #e5e5e5;
+
+  // Coins arrondis
+  border-radius: 5px;
+
+  // Transition
+  transition: all 0.3s ease;
+
+  // Au survol
+  &:hover {
+    // Bordure dorée
+    border-color: #d4af37;
+
+    // Ombre
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+
+    // Légère élévation
+    transform: translateY(-5px);
+  }
+}
+
+// Nom de la ville
+.city-name {
+  // Taille
+  font-size: 1.8rem;
+
+  // Police grasse
+  font-weight: 600;
+
+  // Couleur noire
+  color: #1a1a1a;
+
+  // Espacement
+  margin: 0 0 10px 0;
+  letter-spacing: 1px;
+
+  // Police serif
+  font-family: 'Cormorant Garamond', serif;
+}
+
+// Nom du pays
+.city-country {
+  // Taille
+  font-size: 1rem;
+
+  // Couleur dorée
+  color: #d4af37;
+
+  // Espacement
+  margin: 0;
+  letter-spacing: 1px;
+
+  // Majuscules
+  text-transform: uppercase;
+
+  // Police légère
+  font-weight: 500;
+}
+
+// Note en bas de page
+.contact-note {
+  // Taille
+  font-size: 1.1rem;
+
+  // Couleur grise
+  color: #666;
+
+  // Centre
+  text-align: center;
+
+  // Espacement
+  margin: 50px 0 0 0;
+
+  // Style italique
+  font-style: italic;
+  line-height: 1.7;
+}
+
+// ============================================
+// RESPONSIVE
+// ============================================
+
+// Tablettes (< 1024px)
+@media (max-width: 1024px) {
+  .cities-grid {
+    // 2 colonnes
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+// Mobiles (< 768px)
+@media (max-width: 768px) {
+  .contact-title {
+    font-size: 2.5rem;
+  }
+
+  .cities-grid {
+    // 1 colonne
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .contact-section {
+    padding: 50px 5%;
+  }
+
+  .city-card {
+    padding: 35px 20px;
+  }
+}

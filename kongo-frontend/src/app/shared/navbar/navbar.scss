@@ -1,0 +1,221 @@
+// ============================================
+// STYLES NAVBAR LUXE KONGO
+// ============================================
+
+// Conteneur principal de la navbar
+.navbar {
+  // Flexbox pour aligner les éléments horizontalement
+  display: flex;
+
+  // Répartit l'espace : logo à gauche, menu à droite
+  justify-content: space-between;
+
+  // Centre verticalement les éléments
+  align-items: center;
+
+  // Espacement intérieur : 20px haut/bas, 5% gauche/droite
+  padding: 20px 5%;
+
+  // Fond blanc pur (luxe)
+  background-color: #ffffff;
+
+  // Ombre subtile pour effet flottant
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+
+  // Position fixe en haut de la page
+  position: sticky;
+  top: 0;
+
+  // Z-index élevé pour rester au-dessus du contenu
+  z-index: 1000;
+}
+
+// ============================================
+// SECTION LOGO / MARQUE
+// ============================================
+
+.navbar-brand {
+  // Affichage en colonne (nom au-dessus, sous-titre en-dessous)
+  display: flex;
+  flex-direction: column;
+
+  // Aligne le texte à gauche
+  align-items: flex-start;
+}
+
+// Nom de la marque "KONGO"
+.brand-name {
+  // Taille de police grande et imposante
+  font-size: 2rem;
+
+  // Épaisseur de la police (gras)
+  font-weight: 700;
+
+  // Couleur noire élégante
+  color: #1a1a1a;
+
+  // Supprime le soulignement du lien
+  text-decoration: none;
+
+  // Espacement entre les lettres pour effet luxe
+  letter-spacing: 3px;
+
+  // Police élégante (Cormorant Garamond sinon serif par défaut)
+  font-family: 'Cormorant Garamond', 'Playfair Display', serif;
+
+  // Transition douce au survol
+  transition: color 0.3s ease;
+
+  // Au survol de la souris
+  &:hover {
+    // Couleur dorée
+    color: #d4af37;
+  }
+}
+
+// Sous-titre "by AMENYS"
+.brand-subtitle {
+  // Taille de police plus petite
+  font-size: 0.75rem;
+
+  // Couleur grise élégante
+  color: #666;
+
+  // Espacement entre les lettres
+  letter-spacing: 2px;
+
+  // Texte en majuscules
+  text-transform: uppercase;
+
+  // Marge supérieure pour espacer du nom principal
+  margin-top: 2px;
+}
+
+// ============================================
+// SECTION MENU DE NAVIGATION
+// ============================================
+
+// Liste <ul> contenant les liens
+.navbar-menu {
+  // Flexbox pour aligner les liens horizontalement
+  display: flex;
+
+  // Espace entre chaque lien
+  gap: 40px;
+
+  // Supprime les puces de liste
+  list-style: none;
+
+  // Supprime les marges par défaut
+  margin: 0;
+  padding: 0;
+}
+
+// Chaque élément <li> de la liste
+.navbar-item {
+  // Pas de style particulier ici
+}
+
+// Chaque lien <a> du menu
+.navbar-link {
+  // Couleur du texte (gris foncé)
+  color: #333;
+
+  // Supprime le soulignement
+  text-decoration: none;
+
+  // Taille de police moyenne
+  font-size: 1rem;
+
+  // Police semi-grasse
+  font-weight: 500;
+
+  // Espacement entre les lettres
+  letter-spacing: 1px;
+
+  // Texte en majuscules pour effet luxe
+  text-transform: uppercase;
+
+  // Position relative pour le pseudo-élément ::after
+  position: relative;
+
+  // Transition douce pour la couleur
+  transition: color 0.3s ease;
+
+  // Au survol de la souris
+  &:hover {
+    // Change la couleur en doré
+    color: #d4af37;
+  }
+
+  // Trait doré sous le lien au survol
+  &::after {
+    // Contenu vide (obligatoire pour afficher le pseudo-élément)
+    content: '';
+
+    // Positionnement absolu par rapport au lien
+    position: absolute;
+
+    // Positionné en bas du lien
+    bottom: -5px;
+    left: 0;
+
+    // Largeur initiale 0 (invisible)
+    width: 0;
+
+    // Hauteur du trait
+    height: 2px;
+
+    // Couleur dorée
+    background-color: #d4af37;
+
+    // Transition douce pour l'animation
+    transition: width 0.3s ease;
+  }
+
+  // Au survol : le trait s'étend à 100%
+  &:hover::after {
+    width: 100%;
+  }
+}
+
+// ============================================
+// LIEN ACTIF (page courante)
+// ============================================
+
+// Classe appliquée automatiquement par routerLinkActive
+.navbar-link.active {
+  // Couleur dorée pour le lien actif
+  color: #d4af37;
+
+  // Trait doré toujours visible sous le lien actif
+  &::after {
+    width: 100%;
+  }
+}
+
+// ============================================
+// RESPONSIVE (Mobile)
+// ============================================
+
+// Pour les écrans de moins de 768px (tablettes et mobiles)
+@media (max-width: 768px) {
+  .navbar {
+    // Navbar en colonne sur mobile
+    flex-direction: column;
+
+    // Réduit l'espacement
+    gap: 20px;
+    padding: 15px 5%;
+  }
+
+  .navbar-menu {
+    // Réduit l'espace entre les liens
+    gap: 20px;
+  }
+
+  .brand-name {
+    // Réduit la taille du logo
+    font-size: 1.5rem;
+  }
+}

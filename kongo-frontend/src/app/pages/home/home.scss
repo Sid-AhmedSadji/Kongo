@@ -1,0 +1,366 @@
+// ============================================
+// STYLES PAGE HOME LUXE KONGO
+// ============================================
+
+// ============================================
+// SECTION HERO (Haut de page)
+// ============================================
+
+.hero-section {
+  // Espacement intérieur généreux pour respirer
+  padding: 80px 10%;
+
+  // Fond blanc pur (luxe)
+  background-color: #ffffff;
+
+  // Centre le contenu horizontalement
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  // Hauteur minimale pour occuper l'écran
+  min-height: 70vh;
+}
+
+// Conteneur du contenu centré
+.hero-content {
+  // Largeur maximale pour une lecture confortable
+  max-width: 800px;
+
+  // Centre le texte
+  text-align: center;
+}
+
+// Titre principal "KONGO"
+.hero-title {
+  // Taille de police très grande et imposante
+  font-size: 5rem;
+
+  // Épaisseur de la police (très gras)
+  font-weight: 700;
+
+  // Couleur noire profonde
+  color: #1a1a1a;
+
+  // Supprime les marges par défaut
+  margin: 0 0 10px 0;
+
+  // Espacement entre les lettres (effet luxe)
+  letter-spacing: 8px;
+
+  // Police élégante serif
+  font-family: 'Cormorant Garamond', 'Playfair Display', serif;
+
+  // Texte en majuscules
+  text-transform: uppercase;
+}
+
+// Sous-titre "L'Éveil des Sens"
+.hero-subtitle {
+  // Taille moyenne
+  font-size: 1.8rem;
+
+  // Police légère
+  font-weight: 300;
+
+  // Couleur dorée
+  color: #d4af37;
+
+  // Espacement
+  margin: 0 0 40px 0;
+  letter-spacing: 3px;
+
+  // Police élégante
+  font-family: 'Cormorant Garamond', 'Playfair Display', serif;
+
+  // Style italique pour élégance
+  font-style: italic;
+}
+
+// Description du parfum
+.hero-description {
+  // Taille de police confortable pour la lecture
+  font-size: 1.2rem;
+
+  // Hauteur de ligne pour aération du texte
+  line-height: 1.8;
+
+  // Couleur grise élégante
+  color: #333;
+
+  // Espacement vertical
+  margin: 0 0 30px 0;
+
+  // Largeur maximale pour centrer
+  max-width: 700px;
+
+  // Centre le paragraphe
+  margin-left: auto;
+  margin-right: auto;
+}
+
+// Citation spirituelle
+.hero-quote {
+  // Taille légèrement plus grande
+  font-size: 1.3rem;
+
+  // Style italique
+  font-style: italic;
+
+  // Couleur grise moyenne
+  color: #555;
+
+  // Espacement
+  margin: 30px 0;
+  line-height: 1.8;
+
+  // Le <em> à l'intérieur sera en doré
+  em {
+    color: #d4af37;
+    font-weight: 500;
+  }
+}
+
+// Séparateur visuel (ligne dorée)
+.divider {
+  // Largeur de la ligne
+  width: 100px;
+
+  // Hauteur (épaisseur)
+  height: 2px;
+
+  // Couleur dorée
+  background-color: #d4af37;
+
+  // Centre la ligne horizontalement
+  margin: 50px auto;
+}
+
+// Titre "Pour les femmes-mères..."
+.hero-audience-title {
+  // Taille moyenne
+  font-size: 1.5rem;
+
+  // Police semi-grasse
+  font-weight: 600;
+
+  // Couleur noire
+  color: #1a1a1a;
+
+  // Espacement
+  margin: 40px 0 20px 0;
+  letter-spacing: 1px;
+
+  // Police serif
+  font-family: 'Cormorant Garamond', serif;
+}
+
+// Texte destinataires
+.hero-audience-text {
+  // Taille confortable
+  font-size: 1.1rem;
+
+  // Hauteur de ligne pour lisibilité
+  line-height: 1.9;
+
+  // Couleur grise
+  color: #444;
+
+  // Espacement
+  margin: 0;
+}
+
+// ============================================
+// SECTION PRODUIT (Description)
+// ============================================
+
+.product-section {
+  // Fond légèrement gris pour contraste avec hero
+  background-color: #f9f9f9;
+
+  // Espacement intérieur
+  padding: 80px 10%;
+}
+
+// Conteneur du contenu
+.product-content {
+  // Largeur maximale
+  max-width: 900px;
+
+  // Centre le contenu
+  margin: 0 auto;
+}
+
+// Titre section "L'esprit du fleuve KONGO"
+.product-title {
+  // Taille grande
+  font-size: 2.5rem;
+
+  // Police grasse
+  font-weight: 700;
+
+  // Couleur noire
+  color: #1a1a1a;
+
+  // Centre le texte
+  text-align: center;
+
+  // Espacement
+  margin: 0 0 40px 0;
+  letter-spacing: 2px;
+
+  // Police serif
+  font-family: 'Cormorant Garamond', serif;
+}
+
+// Sous-titre "Un flacon d'exception"
+.product-subtitle {
+  // Taille moyenne
+  font-size: 1.8rem;
+
+  // Police semi-grasse
+  font-weight: 600;
+
+  // Couleur dorée
+  color: #d4af37;
+
+  // Centre le texte
+  text-align: center;
+
+  // Espacement
+  margin: 50px 0 30px 0;
+  letter-spacing: 1px;
+
+  // Police serif
+  font-family: 'Cormorant Garamond', serif;
+}
+
+// Paragraphes de texte produit
+.product-text {
+  // Taille confortable
+  font-size: 1.15rem;
+
+  // Hauteur de ligne aérée
+  line-height: 1.9;
+
+  // Couleur grise foncée
+  color: #333;
+
+  // Espacement entre paragraphes
+  margin: 0 0 25px 0;
+
+  // Justification du texte pour élégance
+  text-align: justify;
+
+  // <strong> en gras et doré
+  strong {
+    font-weight: 600;
+    color: #d4af37;
+  }
+}
+
+// Citation produit
+.product-quote {
+  // Taille légèrement plus grande
+  font-size: 1.4rem;
+
+  // Style italique
+  font-style: italic;
+
+  // Couleur dorée
+  color: #d4af37;
+
+  // Centre le texte
+  text-align: center;
+
+  // Espacement
+  margin: 40px 0;
+
+  // Police serif
+  font-family: 'Cormorant Garamond', serif;
+}
+
+// Texte exclusivité "99 privilégiées"
+.product-exclusive {
+  // Taille moyenne
+  font-size: 1.2rem;
+
+  // Couleur noire
+  color: #1a1a1a;
+
+  // Centre le texte
+  text-align: center;
+
+  // Espacement
+  margin: 30px 0 0 0;
+  line-height: 1.8;
+
+  // <strong> en doré et plus gras
+  strong {
+    font-weight: 700;
+    color: #d4af37;
+    font-size: 1.3rem;
+  }
+}
+
+// ============================================
+// SECTION NEWSLETTER (placeholder)
+// ============================================
+
+.newsletter-section {
+  // Fond blanc
+  background-color: #ffffff;
+
+  // Espacement intérieur
+  padding: 60px 10%;
+}
+
+// ============================================
+// RESPONSIVE DESIGN (Mobile et tablettes)
+// ============================================
+
+// Tablettes (largeur < 768px)
+@media (max-width: 768px) {
+  .hero-title {
+    // Réduit la taille du titre sur mobile
+    font-size: 3rem;
+    letter-spacing: 4px;
+  }
+
+  .hero-subtitle {
+    font-size: 1.3rem;
+  }
+
+  .hero-description,
+  .product-text {
+    font-size: 1rem;
+    text-align: left;
+  }
+
+  .product-title {
+    font-size: 2rem;
+  }
+
+  .hero-section,
+  .product-section {
+    // Réduit l'espacement sur mobile
+    padding: 50px 5%;
+  }
+}
+
+// Mobiles (largeur < 480px)
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 2.5rem;
+    letter-spacing: 3px;
+  }
+
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .hero-section,
+  .product-section {
+    padding: 40px 5%;
+  }
+}

@@ -1,0 +1,25 @@
+<div class="newsletter-container">
+    <h2 class="newsletter-title">Rejoignez le cercle des initiées</h2>
+    <p class="newsletter-text">
+      Inscrivez-vous pour être informée en avant-première.
+    </p>
+  
+    <form (ngSubmit)="subscribe()" #form="ngForm">
+      <input
+        type="email"
+        name="email"
+        [(ngModel)]="email"
+        placeholder="Votre adresse email"
+        required
+        email
+      />
+  
+      <button type="submit" [disabled]="form.invalid || loading">
+        {{ loading ? 'Envoi...' : 'S’inscrire' }}
+      </button>
+    </form>
+  
+    <p class="success" *ngIf="successMessage">{{ successMessage }}</p>
+    <p class="error" *ngIf="errorMessage">{{ errorMessage }}</p>
+  </div>
+  

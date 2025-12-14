@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-booking-button',
@@ -8,4 +9,9 @@ import { Component } from '@angular/core';
 })
 export class BookingButton {
 
+  constructor(public router: Router) {}
+
+  goToBooking() {
+    this.router.navigate(['/booking']);
+  } 
 }

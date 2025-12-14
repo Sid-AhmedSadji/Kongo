@@ -12,6 +12,7 @@ import { Routes } from '@angular/router';
 import { Contact } from './pages/contact/contact';
 import { Home } from './pages/home/home';
 import { Services } from './pages/services/services';
+import { Booking } from './pages/booking/booking'; // ← NOUVEAU : composant page réservation
 
 // Définition et export du tableau des routes
 // Ce tableau sera utilisé par Angular pour savoir quelle page afficher selon l'URL
@@ -77,6 +78,20 @@ export const routes: Routes = [
   },
 
   // ============================================
+  // ROUTE BOOKING (Page réservation)
+  // ============================================
+  {
+    // URL : https://localhost:4200/booking
+    path: 'booking',
+
+    // Affiche le composant Booking
+    component: Booking,
+
+    // Titre dans l'onglet du navigateur
+    title: 'Réservation - KONGO by AMENYS',
+  },
+
+  // ============================================
   // ROUTE WILDCARD (Toutes les autres URLs)
   // ============================================
   {
@@ -89,23 +104,3 @@ export const routes: Routes = [
     redirectTo: '/home',
   },
 ];
-
-// ============================================
-// FLUX DE NAVIGATION
-// ============================================
-/*
-Exemple 1 : L'utilisateur tape https://localhost:4200/
-→ path: '' est détecté
-→ Redirection automatique vers /home
-→ Home est affiché
-
-Exemple 2 : L'utilisateur clique sur "Services"
-→ path: 'services' est détecté
-→ Services est affiché
-→ Titre de l'onglet devient "Services - KONGO by AMENYS"
-
-Exemple 3 : L'utilisateur tape https://localhost:4200/erreur
-→ Aucune route ne correspond
-→ path: '**' (wildcard) capture l'URL
-→ Redirection vers /home
-*/

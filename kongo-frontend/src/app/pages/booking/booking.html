@@ -1,0 +1,35 @@
+<form [formGroup]="bookingForm" (ngSubmit)="submitBooking()">
+    <label>Nom complet</label>
+    <input formControlName="full_name" type="text" />
+  
+    <label>Email</label>
+    <input formControlName="email" type="email" />
+  
+    <label>Choisir une date</label>
+    <input formControlName="date" type="date" />
+  
+    <label>Choisir un créneau (heures creuses)</label>
+    <select formControlName="time_slot" [disabled]="noSlotsAvailable">
+      <option value="">-- Sélectionner un créneau --</option>
+      <option *ngFor="let s of availableSlots; let i = index; trackBy: trackByIndex" [value]="s.value">
+        {{ s.label }}
+      </option>
+    </select>
+  
+    <div *ngIf="dateControl?.hasError('required')" class="error">
+      La date est requise.
+    </div>
+  
+    <div *ngIf="timeSlotControl?.hasError('required')" class="error">
+      Le créneau est requis.
+    </div>
+  
+    <div *ngIf="noSlotsAvailable && dateControl?.value" class="error">
+      Aucun créneau disponible pour cette date.
+    </div>
+  
+    <button type="submit" [disabled]="bookingForm.invalid || noSlotsAvailable">Réserver</button>
+  
+    <p class="success" *ngIf="successMessage">{{ successMessage }}</p>
+    <p class="error" *ngIf="errorMessage">{{ errorMessage }}</p>
+  </form>

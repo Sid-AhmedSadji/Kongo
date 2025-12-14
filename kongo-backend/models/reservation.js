@@ -17,6 +17,10 @@ const Reservation = sequelize.define('reservation', {
     allowNull: false,
     unique: true // Empêche deux RDV à la même heure
   }
-});
+},{
+	tableName:'reservation',
+  timestamps:true
+}
+);
 
 module.exports = Reservation;

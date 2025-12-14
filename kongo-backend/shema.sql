@@ -1,0 +1,21 @@
+-- shema.sql
+
+-- Table reservation
+
+CREATE TABLE IF NOT EXISTS reservation (
+  id SERIAL PRIMARY KEY,
+  full_name VARCHAR(255)NOT NULL,
+  email VARCHAR(255) NOT NULL,
+  date_rdv TIMESTAMP WITH TIME ZONE NOT NULL,
+  createdAt TIMESTAMP WITH TIME ZONE DEFAULT now(),
+  updatedAt TIMESTAMP WITH TIME ZONE DEFAULT now(),
+);
+
+-- Table newsletter
+
+CREATE TABLE IF NOT EXISTS newsletter(
+  id SERIAL PRIMARY KEY,
+  email VARCHAR(255) NOT NULL UNIQUE,
+  createdAt TIMESTAMP WITH TIME ZONE DEFAULT now(),
+  updatedAt TIMESTAMP WITH TIME ZONE DEFAULT now()
+);

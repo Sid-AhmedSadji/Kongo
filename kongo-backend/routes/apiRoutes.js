@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
-const newsletterController = require('../controllers/');
+const newsletterController = require('../controllers/newsletterController');
 // Mise à jour de l'import
 const reservationController = require('../controllers/reservationController');
 

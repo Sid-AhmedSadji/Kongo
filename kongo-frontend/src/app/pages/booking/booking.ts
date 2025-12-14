@@ -106,7 +106,7 @@ export class Booking implements OnDestroy {
     };
 
     // Appel HTTP (exemple). Remplace l'URL par la tienne.
-    this.http.post('https://localhost:3000/api/bookings', payload).subscribe({
+    this.http.post('https://localhost:3000/api/reservation', payload).subscribe({
       next: () => {
         this.successMessage = 'Réservation enregistrée avec succès !';
         this.bookingForm.reset();

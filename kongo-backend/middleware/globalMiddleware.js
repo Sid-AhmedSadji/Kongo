@@ -17,4 +17,3 @@ const globalMiddleWare = (app) => {
 };
 
 module.exports = globalMiddleWare;
-;

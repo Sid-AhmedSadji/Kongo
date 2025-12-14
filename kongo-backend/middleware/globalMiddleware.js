@@ -2,7 +2,6 @@ const cors = require('cors');
 const helmet = require('helmet');
 
 const globalMiddleware = (app) => {
-    console.log(req.method, req.url);
 
     app.use(
         () => {console.log(origine)}

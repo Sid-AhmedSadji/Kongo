@@ -7,10 +7,9 @@ exports.createReservation = async (req, res) => {
 
     // On utilise Reservation.create
     const newReservation = await Reservation.create({
-      fullName,
+      full_name,
       email,
-      city,
-      preferredDate: date
+      date_rdv: date
     });
 
     res.status(201).json({ 

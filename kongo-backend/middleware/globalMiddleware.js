@@ -10,9 +10,7 @@ const globalMiddleware = (app) => {
     app.use(helmet());
     app.use(cors({
         origin : 'http://localhost:4200'
-    })
-    )
-    next();
+    }));
 };
 
 module.exports = globalMiddleware;

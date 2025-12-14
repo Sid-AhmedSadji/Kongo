@@ -1,6 +1,5 @@
 const cors = require('cors');
 const helmet = require('helmet');
-require('dotenv').config();
 
 const globalMiddleware = (app) => {
   // Logging méthode + URL

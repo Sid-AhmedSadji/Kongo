@@ -1,7 +1,7 @@
 // ============================================
 // SECTION 1 : IMPORTATION DES MODULES
 // ============================================
-
+require('dotenv').config();
 const https = require('https');
 const fs = require('fs');
 const express = require('express');

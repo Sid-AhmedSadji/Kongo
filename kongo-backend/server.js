@@ -11,7 +11,6 @@ const apiRoutes = require('./routes/apiRoutes');
 const globalMiddleware = require('./middleware/globalMiddleware' );
 
 // Dotenv charge les variables d'environnement depuis un fichier .env (mots de passe, clés API, etc.)
-require('dotenv').config();
 
 // ============================================
 // SECTION 2 : CRÉATION DE L'APPLICATION

@@ -1,4 +1,5 @@
 const cors = require('cors');
+const { parse } = require('dotenv');
 const helmet = require('helmet');
 
 const globalMiddleware = (app) => {
@@ -15,7 +16,7 @@ const globalMiddleware = (app) => {
   app.use(helmet());
 
   // CORS pour le front Angular en dev
-  const allowedOrigins = ['http://localhost:4200', 'http://192.158.50.20:4200'];
+  const allowedOrigins = process.env.ALLOWED_ORIGINS.split(',');
   app.use(cors({
     origin: (origin, callback) => {
       if (allowedOrigins.includes(origin)) {

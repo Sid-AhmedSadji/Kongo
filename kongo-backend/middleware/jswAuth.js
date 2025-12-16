@@ -2,6 +2,9 @@ const jsw = require('jsonwebtoken');
 
 const Auth = (req, res, next) => {
     try {
+        if (!req.headers.authorization) {
+            throw 'Invalid token';
+        }
         const token = req.headers.authorization.split(' ')[1];
         const decodedToken = jsw.verify(token, process.env.JWT_SECRET);
         const userId = decodedToken.userId;

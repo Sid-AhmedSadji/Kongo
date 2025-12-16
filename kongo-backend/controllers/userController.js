@@ -89,7 +89,7 @@ exports.logout = async (req, res) => {
 // ===============================
 exports.getUser = async (req, res) => {
   try {
-    const userId = req.user.id; // récupéré via middleware JWT
+    const userId = req.params.id; // récupéré via middleware JWT
 
     const user = await User.findByPk(userId, {
       attributes: ["id", "email", "role", "createdAt"]

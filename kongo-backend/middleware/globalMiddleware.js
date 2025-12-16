@@ -1,5 +1,4 @@
 const cors = require('cors');
-const { parse } = require('dotenv');
 const helmet = require('helmet');
 
 
@@ -15,6 +14,7 @@ const globalMiddleware = (app) => {
 
   // Sécurité HTTP headers
   app.use(helmet());
+  console.log("Global middleware chargé !");
   console.log(process.env.ALLOWED_ORIGINS);
   // CORS pour le front Angular en dev
   const allowedOrigins = process.env.ALLOWED_ORIGINS.split(',');

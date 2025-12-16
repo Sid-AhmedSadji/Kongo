@@ -16,14 +16,14 @@ const Auth = (req, res, next) => {
     const userId = decodedToken.id;
 
     // If route has :id → check ownership
-    if (req.params.id && Number(req.params.id) !== userId) {
+    if (req.params && req.params.id && Number(req.params.id) !== userId) {
         console.log(req.params.id);
         console.log(userId);
       throw 'Invalid user ID';
     }
 
     // If body has userId → check ownership
-    if (req.body.id && Number(req.body.id) !== userId) {
+    if (req.body && req.body.id && Number(req.body.id) !== userId) {
       throw 'Invalid user ID';
     }
 

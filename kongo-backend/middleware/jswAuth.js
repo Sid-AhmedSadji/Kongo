@@ -1,28 +1,38 @@
-const jsw = require('jsonwebtoken');
+const jwt = require('jsonwebtoken');
 
 const Auth = (req, res, next) => {
-    try {
-        if (!req.headers.authorization) {
-            throw 'Invalid token';
-        }
-        const token = req.headers.authorization.split(' ')[1];
-        const decodedToken = jsw.verify(token, process.env.JWT_SECRET);
-        const userId = decodedToken.userId;
-        if ( req.body.userId && req.body.userId !== userId) {
-            throw 'Invalid user ID';
-        }
-        else if ( req.params.id && req.params.id !== userId ) {
-            throw 'Invalid user ID';
-        } 
-        else if( !req.params.id && !req.body.userId ) {
-            throw 'Invalid user ID';
-        }else {
-            next();
-        }
-    } catch (error) {
-        console.log(error);
-        res.status(401).json({ error });
+  try {
+    const authHeader = req.headers.authorization;
+    if (!authHeader) {
+      throw 'Missing Authorization header';
     }
+
+    const token = authHeader.split(' ')[1];
+    if (!token) {
+      throw 'Invalid token format';
+    }
+
+    const decodedToken = jwt.verify(token, process.env.JWT_SECRET);
+    const userId = decodedToken.id;
+
+    // If route has :id → check ownership
+    if (req.params.id && Number(req.params.id) !== userId) {
+      throw 'Invalid user ID';
+    }
+
+    // If body has userId → check ownership
+    if (req.body.userId && Number(req.body.userId) !== userId) {
+      throw 'Invalid user ID';
+    }
+
+    // Attach user to request (VERY useful)
+    req.user = decodedToken;
+
+    next();
+  } catch (error) {
+    console.log(error);
+    res.status(401).json({ error: 'Unauthorized' });
+  }
 };
 
 module.exports = Auth;

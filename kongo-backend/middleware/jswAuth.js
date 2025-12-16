@@ -23,7 +23,7 @@ const Auth = (req, res, next) => {
     }
 
     // If body has userId → check ownership
-    if (req.body.userId && Number(req.body.userId) !== userId) {
+    if (req.body.id && Number(req.body.id) !== userId) {
       throw 'Invalid user ID';
     }
 

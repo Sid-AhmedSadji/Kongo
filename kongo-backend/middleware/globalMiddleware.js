@@ -22,11 +22,6 @@ const globalMiddleware = (app) => {
   app.use(cors({
     origin: (origin, callback) => {
 
-      if (!origin) {
-        console.log(origin);
-        console.log(allowedOrigins);
-        return callback(null, true);
-      }
       if (allowedOrigins.includes(origin)) {
         callback(null, true); // origin autorisée
       } else {

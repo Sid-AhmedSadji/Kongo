@@ -17,6 +17,8 @@ const Auth = (req, res, next) => {
 
     // If route has :id → check ownership
     if (req.params.id && Number(req.params.id) !== userId) {
+        console.log(req.params.id);
+        console.log(userId);
       throw 'Invalid user ID';
     }
 

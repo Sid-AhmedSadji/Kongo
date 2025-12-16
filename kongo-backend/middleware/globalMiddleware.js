@@ -15,13 +15,18 @@ const globalMiddleware = (app) => {
   // Sécurité HTTP headers
   app.use(helmet());
   console.log("Global middleware chargé !");
+
   console.log(process.env.ALLOWED_ORIGINS);
   // CORS pour le front Angular en dev
   const allowedOrigins = process.env.ALLOWED_ORIGINS.split(',');
   app.use(cors({
     origin: (origin, callback) => {
-      console.log(origin);
-      console.log(allowedOrigins);
+
+      if (!origin) {
+        console.log(origin);
+        console.log(allowedOrigins);
+        return callback(null, true);
+      }
       if (allowedOrigins.includes(origin)) {
         callback(null, true); // origin autorisée
       } else {

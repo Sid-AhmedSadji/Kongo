@@ -2,17 +2,12 @@ const cors = require('cors');
 const helmet = require('helmet');
 
 const globalMiddleware = (app) => {
-  // Logging méthode + URL
-  app.use((req, res, next) => {
-    console.log(process.env.DB_PASSWORD);
-    console.log(`${req.method} ${req.url}`);
-    next();
-  });
 
   // Log de l'origine de la requête
   app.use((req, res, next) => {
     const origin = req.headers.origin || 'unknown-origin';
     console.log('Origin:', origin);
+    console.log(`${req.method} ${req.url}`);
     next();
   });
 

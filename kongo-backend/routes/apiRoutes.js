@@ -19,7 +19,7 @@ router.get('/admin', adminController.getAdmin);
 router.post('/signup', userController.signup);
 router.post('/login', userController.login);
 router.post('/logout', userController.logout);
-router.get('/user', userController.getUser);
+router.get('/user/:id', userController.getUser);
 router.get('/creditCard', userController.getCreditCard);
 
 module.exports = router;
